@@ -1,4 +1,4 @@
-import { ChevronDown, Heart, Send } from "lucide-react";
+import { ChevronDown, Send } from "lucide-react";
 import { useState } from "react";
 import logo from "../../public/logo1.png";
 const FacebookIcon = ({ className }) => (
@@ -165,8 +165,8 @@ const Footer = () => {
         {/* Bottom Bar: Copyright & Social Links */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-5 text-sm md:text-base">
           <p className="flex items-center gap-1.5 text-slate-500">
-            © {new Date().getFullYear()} Cinema. Built with
-            <Heart className="w-4 h-4 text-red-500 fill-red-500 inline" />
+            © {new Date().getFullYear()} Cinevia. Built with
+            {/* <Heart className="w-4 h-4 text-red-500 fill-red-500 inline" /> */}
             for movie lovers.
           </p>
 
