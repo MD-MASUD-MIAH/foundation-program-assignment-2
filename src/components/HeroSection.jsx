@@ -1,4 +1,5 @@
 import { Play, Star } from "lucide-react";
+import { Link } from "react-router";
 import video from "../../public/downloaded-file.mp4";
 
 const HeroSection = () => {
@@ -58,10 +59,13 @@ const HeroSection = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 md:gap-5 pt-1 md:pt-2">
-            <a href="/movies" className="flex items-center gap-3 px-8 py-3.5 md:px-9 md:py-4 rounded-sm bg-red-600 hover:bg-red-500 active:scale-95 text-white font-bold text-sm md:text-base tracking-wide uppercase shadow-2xl shadow-red-600/40 hover:shadow-red-600/60 transition-all duration-200">
+            <Link
+              to="/movies"
+              className="flex items-center gap-3 px-8 py-3.5 md:px-9 md:py-4 rounded-sm bg-red-600 hover:bg-red-500 active:scale-95 text-white font-bold text-sm md:text-base tracking-wide uppercase shadow-2xl shadow-red-600/40 hover:shadow-red-600/60 transition-all duration-200"
+            >
               <Play className="w-4 h-4 md:w-5 md:h-5 fill-white" />
               <span>Explore Now</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
