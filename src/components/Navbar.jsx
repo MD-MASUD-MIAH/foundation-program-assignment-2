@@ -1,7 +1,7 @@
-import { Menu, Play, Sparkles, X } from "lucide-react";
+import { Menu, Sparkles, X } from "lucide-react";
 import { useState } from "react";
 import { Link, NavLink } from "react-router";
-
+import logo from "../../public/logo1.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -13,15 +13,11 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-950/90 via-slate-950/95 to-red-950/90 backdrop-blur-md border-b border-red-500/20 shadow-xl shadow-red-950/40">
       <div className="w-11/12 lg:max-w-7xl mx-auto">
-        <div className="h-16 flex items-center justify-between">
+        <div className="h-22 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5 select-none">
-            <div className="w-9 h-9 rounded-sm bg-red-600 flex items-center justify-center shadow-md shadow-red-600/30">
-              <Play className="w-4 h-4 text-white fill-white ml-0.5" />
+            <div className="w-20 h-20 ">
+              <img src={logo} alt="" />
             </div>
-
-            <span className="text-xl font-bold tracking-tight text-white">
-              Cine<span className="text-red-500">ma</span>
-            </span>
           </Link>
 
           {/* Desktop Navigation */}

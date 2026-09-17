@@ -1,6 +1,6 @@
-import { ChevronDown, Heart, Play, Send } from "lucide-react";
+import { ChevronDown, Heart, Send } from "lucide-react";
 import { useState } from "react";
-
+import logo from "../../public/logo1.png";
 const FacebookIcon = ({ className }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
     <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
@@ -84,12 +84,9 @@ const Footer = () => {
           {/* Brand Info & Newsletter */}
           <div className="lg:col-span-2 space-y-5">
             <a href="#" className="flex items-center gap-2.5 select-none">
-              <div className="w-10 h-10 rounded-sm bg-red-600 flex items-center justify-center shadow-lg shadow-red-600/30">
-                <Play className="w-5 h-5 text-white fill-white ml-0.5" />
+              <div className="w-30 h-30 ">
+                <img src={logo} alt="" />
               </div>
-              <span className="text-2xl font-bold tracking-tight text-white">
-                Cine<span className="text-red-500">ma</span>
-              </span>
             </a>
 
             <p className="text-sm md:text-base text-slate-400 leading-relaxed max-w-sm font-normal">
