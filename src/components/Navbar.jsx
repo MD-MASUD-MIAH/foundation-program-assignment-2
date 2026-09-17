@@ -13,9 +13,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-950/90 via-slate-950/95 to-red-950/90 backdrop-blur-md border-b border-red-500/20 shadow-xl shadow-red-950/40">
       <div className="w-11/12 lg:max-w-7xl mx-auto">
-        <div className="h-22 flex items-center justify-between">
+        <div className="h-18 lg:h-22 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2.5 select-none">
-            <div className="w-20 h-20 ">
+            <div className="w-16 h-16 lg:w-20 lg:h-20 ">
               <img src={logo} alt="" />
             </div>
           </Link>
