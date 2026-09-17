@@ -4,7 +4,7 @@ import video from "../../public/downloaded-file.mp4";
 
 const HeroSection = () => {
   return (
-    <section className="relative w-full min-h-[75vh] md:min-h-screen flex items-center justify-center md:justify-start overflow-hidden bg-slate-950 select-none">
+    <section className="relative w-full min-h-[90vh] md:min-h-screen flex items-center justify-center md:justify-start overflow-hidden bg-slate-950 select-none">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
