@@ -1,6 +1,7 @@
 import { ChevronDown, Send } from "lucide-react";
 import { useState } from "react";
 import logo from "../../public/logo1.png";
+
 const FacebookIcon = ({ className }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
     <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z" />
@@ -40,6 +41,13 @@ const Footer = () => {
 
   const toggleSection = (section) => {
     setOpenSection(openSection === section ? null : section);
+  };
+
+  const getLinkHref = (link) => {
+    const formatted = link.toLowerCase();
+    if (formatted === "home") return "/";
+    if (formatted === "movies") return "/movies";
+    return "#";
   };
 
   const footerSections = [
@@ -83,9 +91,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-12 pb-14 border-b border-white/10">
           {/* Brand Info & Newsletter */}
           <div className="lg:col-span-2 space-y-5">
-            <a href="#" className="flex items-center gap-2.5 select-none">
+            <a href="/" className="flex items-center gap-2.5 select-none">
               <div className="w-30 h-30 ">
-                <img src={logo} alt="" />
+                <img src={logo} alt="Logo" />
               </div>
             </a>
 
@@ -148,7 +156,7 @@ const Footer = () => {
                     {section.links.map((link) => (
                       <li key={link}>
                         <a
-                          href="#"
+                          href={getLinkHref(link)}
                           className="text-slate-400 hover:text-red-500 transition-colors inline-block"
                         >
                           {link}
@@ -165,9 +173,7 @@ const Footer = () => {
         {/* Bottom Bar: Copyright & Social Links */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-5 text-sm md:text-base">
           <p className="flex items-center gap-1.5 text-slate-500">
-            © {new Date().getFullYear()} Cinevia. Built with
-            {/* <Heart className="w-4 h-4 text-red-500 fill-red-500 inline" /> */}
-            for movie lovers.
+            © {new Date().getFullYear()} Cinevia. Built with for movie lovers.
           </p>
 
           <div className="flex items-center gap-3">
